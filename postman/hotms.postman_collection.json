@@ -65,13 +65,6 @@
 							],
 							"path": [
 								"hotels"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -99,13 +92,6 @@
 							"path": [
 								"hotels",
 								"1"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -133,19 +119,13 @@
 							"path": [
 								"hotels",
 								"1"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
 					"response": []
 				}
 			],
+			"description": "CRUD operation for hotel resource",
 			"protocolProfileBehavior": {}
 		},
 		{
@@ -218,15 +198,6 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"hotelId\": 1,\n    \"number\": \"1\",\n    \"status\": \"available\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{host}}/rooms",
 							"host": [
@@ -234,13 +205,6 @@
 							],
 							"path": [
 								"rooms"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -268,13 +232,6 @@
 							"path": [
 								"rooms",
 								"1"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -302,13 +259,6 @@
 							"path": [
 								"rooms",
 								"1"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -362,7 +312,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"roomId\": 1,\n    \"rate\": 12.00,\n    \"startDate\": \"2020-03-10\",\n    \"endDate\": \"2020-03-14\"\n}",
+							"raw": "{\n    \"roomId\": 1,\n    \"rate\": 12.00,\n    \"startDate\": \"2020-03-10\",\n    \"endDate\": \"2020-03-12\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -376,13 +326,6 @@
 							],
 							"path": [
 								"rates"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -410,13 +353,6 @@
 							"path": [
 								"rates",
 								"1"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -444,13 +380,6 @@
 							"path": [
 								"rates",
 								"1"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -518,13 +447,6 @@
 							],
 							"path": [
 								"reservations"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -552,13 +474,6 @@
 							"path": [
 								"reservations",
 								"1"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -586,13 +501,6 @@
 							"path": [
 								"reservations",
 								"1"
-							],
-							"query": [
-								{
-									"key": "name",
-									"value": null,
-									"disabled": true
-								}
 							]
 						}
 					},
@@ -604,7 +512,7 @@
 	],
 	"variable": [
 		{
-			"id": "0f2e534d-89f4-4dc7-aac2-d5579f465eb2",
+			"id": "2293ccb7-f75b-4bd6-95b5-eb5f70b3ce39",
 			"key": "host",
 			"value": "localhost:8080"
 		}
