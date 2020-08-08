@@ -1,0 +1,613 @@
+{
+	"info": {
+		"_postman_id": "842f56db-9539-42bf-a911-ec6bcdd442b0",
+		"name": "hotms",
+		"description": "Hotel Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hotel",
+			"item": [
+				{
+					"name": "Hotel FindAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/hotels",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"hotels"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hotel FindByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/hotels/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"hotels",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hotel Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Bobobox1\",\n    \"address\": \"Jalan Bobobox1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/hotels",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hotel Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Bobobox2\",\n    \"address\": \"Jalan Bobobox2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/hotels/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"hotels",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hotel Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/hotels/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"hotels",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "room",
+			"item": [
+				{
+					"name": "Room FindAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/rooms",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/search?checkIn=2020-03-10&checkOut=2020-03-12",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "checkIn",
+									"value": "2020-03-10"
+								},
+								{
+									"key": "checkOut",
+									"value": "2020-03-12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room FindByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/rooms/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rooms",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hotelId\": 1,\n    \"number\": \"1\",\n    \"status\": \"available\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rooms",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rooms"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hotelId\": 1,\n    \"name\": \"Bobobox2\",\n    \"address\": \"Jalan Bobobox2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rooms/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rooms",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rooms/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rooms",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "rate",
+			"item": [
+				{
+					"name": "Rate FindAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/rates",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rate FindByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/rates/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rates",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rate Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"roomId\": 1,\n    \"rate\": 12.00,\n    \"startDate\": \"2020-03-10\",\n    \"endDate\": \"2020-03-14\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rates",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rates"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rate Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"hotelId\": 1,\n    \"name\": \"Bobobox2\",\n    \"address\": \"Jalan Bobobox2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rates/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rates",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rate Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/rates/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"rates",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "reservation",
+			"item": [
+				{
+					"name": "Reservation FindAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/reservations",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservation FindByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/reservations/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"reservations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservation Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": \"1\",\n    \"customerName\": \"John Doe\",\n    \"total\": 123.12,\n    \"stayRooms\": [\n        {\n            \"roomId\": 1,\n            \"checkIn\": \"2020-01-01\",\n            \"checkOut\": \"2020-01-03\",\n            \"stays\": [{\n                \"guestName\": \"John Doe\"\n            }]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/reservations",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"reservations"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservation Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"orderId\": \"2\",\n    \"customerName\": \"John Doe\",\n    \"total\": 123.12,\n    \"stayRooms\": [\n        {\n            \"roomId\": 1,\n            \"checkIn\": \"2020-01-01\",\n            \"checkOut\": \"2020-01-03\",\n            \"stays\": [{\n                \"guestName\": \"John Doe\"\n            }]\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/reservations/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"reservations",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reservation Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/reservations/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"reservations",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "0f2e534d-89f4-4dc7-aac2-d5579f465eb2",
+			"key": "host",
+			"value": "localhost:8080"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

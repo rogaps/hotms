@@ -1,9 +1,11 @@
 package model
 
-import "github.com/jinzhu/gorm"
+import "time"
 
 type Hotel struct {
-	gorm.Model
-	Name    string
-	Address string
+	ID        uint      `gorm:"primary_key" json:"id,omitempty"`
+	CreatedAt time.Time `json:"createdAt"`
+	UpdatedAt time.Time `json:"updatedAt"`
+	Name      string    `json:"name"`
+	Address   string    `json:"address"`
 }

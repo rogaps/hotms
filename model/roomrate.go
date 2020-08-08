@@ -2,15 +2,14 @@ package model
 
 import (
 	"time"
-
-	"github.com/jinzhu/gorm"
 )
 
 type RoomRate struct {
-	gorm.Model
-	Rate      float64
-	StartDate time.Time
-	EndDate   time.Time
-	RoomID    uint
-	Room      Room
+	ID        uint      `gorm:"primary_key" json:"id,omitempty"`
+	CreatedAt time.Time `json:"createdAt"`
+	UpdatedAt time.Time `json:"updatedAt"`
+	Rate      float64   `json:"rate"`
+	StartDate Date      `sql:"type:datetime" json:"startDate"`
+	EndDate   Date      `sql:"type:datetime" json:"endDate"`
+	RoomID    uint      `sql:"type:integer REFERENCES rooms(id)" json:"roomId"`
 }
